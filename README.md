@@ -70,7 +70,7 @@ This is a full-stack web application that allows users to **report**, **view**, 
 | created_at        | TIMESTAMP    |
 
 ---
-
+![Image](https://github.com/user-attachments/assets/3e050f84-17f0-4c3f-bad0-03b022f25cf6)
 
 
 
