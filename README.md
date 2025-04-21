@@ -39,7 +39,7 @@ This is a full-stack web application that allows users to **report**, **view**, 
 - Express.js
 - TypeScript
 - MySQL
-- CORS & Body Parser
+
 
 ---
 
