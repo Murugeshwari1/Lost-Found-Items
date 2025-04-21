@@ -1,0 +1,80 @@
+<div class="form-container">
+  <h2>{{ editMode ? 'Edit Found Item' : 'Report Found Item' }}</h2>
+
+  <form #formRef="ngForm" (ngSubmit)="submitForm()" novalidate>
+    <!-- Item Name -->
+    <input
+      type="text"
+      [(ngModel)]="item.item_name"
+      name="item_name"
+      placeholder="Item Name"
+      required
+      #itemName="ngModel"
+    />
+    <div *ngIf="itemName.invalid && itemName.touched" class="error">Item name is required.</div>
+
+    <!-- Category -->
+    <select
+      [(ngModel)]="item.category"
+      name="category"
+      required
+      #category="ngModel"
+    >
+      <option value="" disabled selected>Select Category</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Accessories">Accessories</option>
+      <option value="Documents">Documents</option>
+      <option value="Other">Other</option>
+    </select>
+    <div *ngIf="category.invalid && category.touched" class="error">Category is required.</div>
+
+    <!-- Description -->
+    <textarea
+      [(ngModel)]="item.description"
+      name="description"
+      placeholder="Description"
+      rows="3"
+      required
+      #description="ngModel"
+    ></textarea>
+    <div *ngIf="description.invalid && description.touched" class="error">Description is required.</div>
+
+    <!-- Found Location -->
+    <input
+      type="text"
+      [(ngModel)]="item.found_location"
+      name="found_location"
+      placeholder="Found Location"
+      required
+      #location="ngModel"
+    />
+    <div *ngIf="location.invalid && location.touched" class="error">Found location is required.</div>
+
+    <!-- Date Found -->
+    <input
+      type="date"
+      [(ngModel)]="item.date_found"
+      name="date_found"
+      required
+      #dateFound="ngModel"
+    />
+    <div *ngIf="dateFound.invalid && dateFound.touched" class="error">Date found is required.</div>
+
+    <!-- Contact Info -->
+    <input
+      type="text"
+      [(ngModel)]="item.contact_info"
+      name="contact_info"
+      placeholder="Contact Info"
+      required
+      #contact="ngModel"
+    />
+    <div *ngIf="contact.invalid && contact.touched" class="error">Contact info is required.</div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="formRef.invalid">
+      {{ editMode ? 'Update' : 'Submit' }}
+    </button>
+  </form>
+</div>

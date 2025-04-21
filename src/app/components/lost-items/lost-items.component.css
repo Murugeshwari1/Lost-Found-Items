@@ -1,0 +1,62 @@
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, select, textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: left;
+    border-radius: 8px;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* adds spacing between the buttons */
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 6px 14px;
+    border: none;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    background-color: #125aa0;
+  }
+  

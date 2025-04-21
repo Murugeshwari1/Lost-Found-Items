@@ -1,0 +1,27 @@
+<div *ngIf="item">
+    <h2>{{ item.item_name }}</h2>
+  
+    <p><strong>Category:</strong> {{ item.category }}</p>
+    <p><strong>Description:</strong> {{ item.description }}</p>
+  
+    <ng-container *ngIf="type === 'lost'">
+      <p><strong>Last Seen Location:</strong> {{ item.last_seen_location }}</p>
+      <p><strong>Date Lost:</strong> {{ item.date_lost | date }}</p>
+    </ng-container>
+  
+    <ng-container *ngIf="type === 'found'">
+      <p><strong>Found Location:</strong> {{ item.found_location }}</p>
+      <p><strong>Date Found:</strong> {{ item.date_found | date }}</p>
+    </ng-container>
+  
+    <p><strong>Contact Info:</strong> {{ item.contact_info }}</p>
+  
+    <!-- ✅ Action Buttons -->
+    <button (click)="editItem()">Edit</button>
+    <button (click)="deleteItem()">Delete</button>
+  </div>
+  
+  <div *ngIf="!item">
+    Loading item details...
+  </div>
+  

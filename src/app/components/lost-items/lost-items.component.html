@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Lost Items List</h2>
+    <div *ngIf="lostItems.length === 0">No lost items reported.</div>
+    <div *ngFor="let item of lostItems" class="card">
+      <h3>{{ item.item_name }}</h3>
+      <p><strong>Category:</strong> {{ item.category }}</p>
+      <p><strong>Description:</strong> {{ item.description }}</p>
+      <p><strong>Last Seen:</strong> {{ item.last_seen_location }}</p>
+      <p><strong>Date Lost:</strong> {{ item.date_lost }}</p>
+      <p><strong>Contact:</strong> {{ item.contact_info }}</p>
+      <div class="button-group">
+        <button (click)="editItem(item.id)">Edit</button>
+        <button (click)="deleteItem(item.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+  
