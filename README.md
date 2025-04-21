@@ -1,59 +1,74 @@
-# LostFound
+# 🧳 Lost & Found Items Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+This is a full-stack web application that allows users to **report**, **view**, **edit**, and **delete** lost and found items. It helps track and recover misplaced belongings effectively.
 
-## Development server
+## 📚 Features
 
-To start a local development server, run:
+### ✅ Frontend (Angular)
+- Home page with navigation buttons:
+  - Report Lost Item
+  - View Lost Items
+  - Report Found Item
+  - View Found Items
+- Lost and Found item forms with:
+  - Field validations (all fields required)
+  - Duplicate entry prevention
+  - Date validation (lost date must be in the past)
+- Dynamic item lists with Edit & Delete functionality
+- Responsive UI with clean styling
 
-```bash
-ng serve
-```
+### ✅ Backend (Node.js + Express + MySQL)
+- RESTful API for:
+  - Creating, reading, updating, and deleting Lost and Found items
+  - Duplicate entry checks
+  - Date validations
+- MySQL database integration
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🛠 Technologies Used
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 🔹 Frontend
+- Angular (Standalone Components)
+- TypeScript
+- HTML & CSS
+- HttpClientModule
 
-```bash
-ng generate component component-name
-```
+### 🔹 Backend
+- Node.js
+- Express.js
+- TypeScript
+- MySQL
+- CORS & Body Parser
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🗃 Database Schema
 
-## Building
+### `lost_items`
+| Field              | Type         |
+|-------------------|--------------|
+| id (PK)           | INT (AUTO_INCREMENT) |
+| item_name         | VARCHAR      |
+| category          | VARCHAR      |
+| description       | TEXT         |
+| last_seen_location| VARCHAR      |
+| date_lost         | DATE         |
+| contact_info      | VARCHAR      |
+| created_at        | TIMESTAMP    |
 
-To build the project run:
+### `found_items`
+| Field              | Type         |
+|-------------------|--------------|
+| id (PK)           | INT (AUTO_INCREMENT) |
+| item_name         | VARCHAR      |
+| category          | VARCHAR      |
+| description       | TEXT         |
+| found_location    | VARCHAR      |
+| date_found        | DATE         |
+| contact_info      | VARCHAR      |
+| created_at        | TIMESTAMP    |
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
