@@ -71,7 +71,6 @@ This is a full-stack web application that allows users to **report**, **view**, 
 
 ---
 
-![image](https://github.com/user-attachments/assets/ce2c5f03-dc7f-43ae-af14-01b345bb1012)
 
 
 
