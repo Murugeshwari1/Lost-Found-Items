@@ -70,8 +70,15 @@ This is a full-stack web application that allows users to **report**, **view**, 
 | created_at        | TIMESTAMP    |
 
 ---
+
+### OUTPUT ###
 ![Image](https://github.com/user-attachments/assets/3e050f84-17f0-4c3f-bad0-03b022f25cf6)
 
+![Image](https://github.com/user-attachments/assets/67b08426-82c9-4184-bf03-c5ee0c8aa7f7)
+
+![Image](https://github.com/user-attachments/assets/1cc7aecf-d988-4efa-ace7-7ce35581aa34)
+
+![Image](https://github.com/user-attachments/assets/71829b6c-5ee7-46bb-86a5-0135258040bb)
 
 
 
